@@ -34,7 +34,7 @@ sequelize.models = Object.fromEntries(capsEntries);
 // Para relacionarlos hacemos un destructuring
 const {Country,Activity} = sequelize.models;
 
-Country.belongsToMany(Activity, { through: 'TablaIntermedia' });
+Country.belongsToMany(Activity, { through: 'TablaIntermedia' }); 
 Activity.belongsToMany(Country, { through: 'TablaIntermedia' });
 
 module.exports = {
