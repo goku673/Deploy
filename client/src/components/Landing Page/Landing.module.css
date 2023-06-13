@@ -25,11 +25,11 @@
     padding: 15px;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    width: 30%;
-    height: auto;
+    width: 154px;
+    height: 49px;
     color: #fff;
     border: none;
-    font-size: 2em;
+    font-size: 20px;
     transition: all .3s ease-in-out;
     z-index: 1;
     overflow: hidden;
@@ -52,10 +52,4 @@
     width: 100%;
   }
 
-  @media (max-width : 768px){
-      .boton {
-        width: 50%;
-        font-size: 1.5em;
-      }
-  }
   

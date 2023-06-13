@@ -25,45 +25,24 @@
 
 .cardContent {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 1rem;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0 0 10px 10px;
 }
 
-
 .cardContent h5 {
   margin: 0;
   font-size: 1.2rem;
   font-weight: bold;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  white-space: nowrap;
 }
 
 .cardContent p {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
-@media (max-width: 767px) {
-  .cardContent {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transform: none;
-    border-radius: 0;
-  }
-  
-  .cardContent h5 {
-    font-size: 1.2em;
-    white-space: normal;
-  }
-  
-  .cardContent p {
-    font-size: 1em;
-  }
 }
