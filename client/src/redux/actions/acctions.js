@@ -14,7 +14,7 @@ export function  getCountries (){
    
        return   async function async(dispatch){
                 try {
-                       const response = await axios.get('http://localhost:3001/countries');
+                       const response = await axios.get('/countries');
                        return dispatch({
                              type : GET_COUNTRIES,
                              payload : response.data,
@@ -29,7 +29,7 @@ export function  getCountries (){
 export function  createActivity (activity){
      return  async function async(dispatch){
            
-              const response = await axios.post('http://localhost:3001/activities',activity); 
+              const response = await axios.post('/activities',activity); 
                if(!response.data.message){
                    alert('creado con exito');
                     return  dispatch({
@@ -44,7 +44,7 @@ export function  createActivity (activity){
 
 export function  getActivity (){
      return async function  async(dispatch){
-           const  response = await   axios.get('http://localhost:3001/activities');
+           const  response = await   axios.get('/activities');
            return dispatch ({
                type : GET_ACTIVITYS,
                payload : response.data,
@@ -56,7 +56,7 @@ export function  getActivity (){
 export function searchByName (name){
      return async function async(dispatch){
          try {
-          const  response = await axios.get(`http://localhost:3001/countries?name=${name}`);
+          const  response = await axios.get(`/countries?name=${name}`);
                 dispatch({
                      type: GET_COUNTRIE_BY_NAME,
                      payload: response.data,
@@ -86,7 +86,7 @@ export function filterCountryContinent(typeContinet){
 
 export  function cardId(id){
      return  async function async(dispatch){
-          const response = await axios.get(`http://localhost:3001/countries/${id}`);
+          const response = await axios.get(`/countries/${id}`);
           if(!response.data){
             console.log(response);
           }

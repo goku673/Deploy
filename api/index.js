@@ -21,11 +21,13 @@ const  axios = require('axios');
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const {Country} = require('./src/db.js')
+require('dotenv').config();
+const {PORT} = process.env;
 // Syncing all the models at once.
 conn.sync({ force:true}).then(() => {
-  server.listen(3001, async() => {
+  server.listen(PORT, async() => {
  
-    console.log('%s listening at 3001'); // eslint-disable-line no-console
+    console.log('%s listening at',PORT); // eslint-disable-line no-console
     const res = await Country.findAll();
     
        if(!res.length){
