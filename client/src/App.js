@@ -7,7 +7,7 @@ import FormActivity from './components/Form/Form';
 import Landing from './components/Landing Page/Landing';
 import Detail from './components/Detail/Detail';
 import axios from  'axios';
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://deploy-production-3362.up.railway.app/';
 function App() {
         
   return (
